@@ -1,5 +1,5 @@
 (function(exports) {
-  function HeadlineList() {
+  function HeadlineList(apiResponse) {
     this._headlines = [];
   };
 
@@ -11,6 +11,6 @@
     var headline = new Headline(text);
     (this._headlines).push(headline);
   };
-
+  
   exports.HeadlineList = HeadlineList;
 })(this);
