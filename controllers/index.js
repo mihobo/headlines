@@ -11,7 +11,10 @@ function writeToPage(output){
   var headlines = output.response.results.length;
   while (headlines > 0)
   {
-    document.getElementById("content").innerHTML += output.response.results[headlines -1].webTitle + "<br><br>";
+    var headline = output.response.results[headlines -1].webTitle
+    var link = output.response.results[headlines -1].webUrl
+
+    document.getElementById("content").innerHTML += headline.link(link) + "<br><br>";
     headlines -= 1;
   };
 };
